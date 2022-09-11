@@ -6,11 +6,16 @@ import App from "./App";
 //import Router
 import { BrowserRouter } from "react-router-dom";
 
+//import House Context Provider
+import HouseContextProvider from "./context/HouseContext";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </BrowserRouter>
+  <HouseContextProvider>
+    <BrowserRouter>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </BrowserRouter>
+  </HouseContextProvider>
 );
