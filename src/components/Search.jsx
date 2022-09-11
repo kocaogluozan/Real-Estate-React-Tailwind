@@ -13,7 +13,6 @@ import { HouseContext } from "../context/HouseContext";
 
 const Search = () => {
   const { houses } = useContext(HouseContext);
-  console.log(houses);
   return (
     <div className="bg-white max-w-[1170px] mx-auto px-[30px] py-6 flex flex-col lg:flex-row justify-between gap-4 lg:gap-x-3 relative lg:-top-4 lg:shadow-lg lg:bg-transparent lg:backdrop-blur rounded-lg">
       <CountryDropdown />
