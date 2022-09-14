@@ -7,7 +7,7 @@ const House = ({ house }) => {
   const { type, image, price, address, country, bedrooms, bathrooms, surface } =
     house;
   return (
-    <div className="bg-white p-5 rounded-lg shadow-md rounded-tl-[90px] w-full max-w-[352px] mx-auto hover:shadow-2xl cursor-pointer transition">
+    <div className="bg-white p-5 rounded-lg shadow-md rounded-tl-[90px] w-full max-w-[352px] mx-auto hover:shadow-2xl cursor-pointer transition scale-80">
       <img src={image} alt="" className="mb-8" />
       <div className="mb-4 flex gap-x-2 text-sm">
         <div className="bg-green-500 rounded-full text-white px-3">{type}</div>
