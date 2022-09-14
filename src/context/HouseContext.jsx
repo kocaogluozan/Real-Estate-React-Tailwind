@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext, useContext } from "react";
+import React, { useState, useEffect, createContext } from "react";
 
 //import HousesData
 import { housesData } from "../data";
@@ -24,7 +24,7 @@ const HouseContextProvider = ({ children }) => {
     const uniqueCountries = ["Location (any)", ...new Set(allCountries)];
     //set countries
     setCountries(uniqueCountries);
-  }, []);
+  }, [houses]);
 
   //return all properties
   useEffect(() => {
@@ -35,7 +35,7 @@ const HouseContextProvider = ({ children }) => {
     const uniqueProperties = ["Location (any)", ...new Set(allProperties)];
     //set properties
     setProperties(uniqueProperties);
-  }, []);
+  }, [houses]);
 
   const handleClick = () => {
     //set loading
@@ -98,6 +98,7 @@ const HouseContextProvider = ({ children }) => {
         }
       }
     });
+
     setTimeout(() => {
       setLoading(false);
       return newHouses.length < 1 ? setHouses([]) : setHouses(newHouses);
